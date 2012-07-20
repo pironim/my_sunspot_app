@@ -5,16 +5,23 @@ First create gemset my_sunspot_app to use .rvmrc
 bundle install
 
 # create db
+
 rake db:create
+
 rake db:schema:load
+
 rake db:seed
 
 # run solr
+
 rake sunspot:solr:start
+
 rake sunspot:solr:reindex
 
 # fine you can run rails server
 
 rails s
+
 # open page with autocompleate
+
 # visit localhost:3000/posts/search 
