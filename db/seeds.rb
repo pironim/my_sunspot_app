@@ -9,6 +9,6 @@
 User.new(:name => 'awesome_admin', :email => 'good@example.com' ).save
 User.new(:name => 'Regular user', :email => 'evil@example.com' ).save
 
-Post.new(:text => 'some stuff about rails', :user_id => User.first.id)
-Post.new(:text => 'nything else', :user_id => User.first.id)
-Post.new(:text => 'tic', :user_id => User.last.id)
+Post.new(:text => 'some stuff about rails', :user_id => User.first.id).save
+Post.new(:text => 'nything else', :user_id => User.first.id).save
+Post.new(:text => 'tic', :user_id => User.last.id).save
