@@ -4,6 +4,11 @@ First create gemset my_sunspot_app to use .rvmrc
 # install gems
 bundle install
 
+# run solr
+
+rake sunspot:solr:start
+rake sunspot:solr:reindex
+
 # create db
 
 rake db:create
@@ -12,11 +17,6 @@ rake db:schema:load
 
 rake db:seed
 
-# run solr
-
-rake sunspot:solr:start
-
-rake sunspot:solr:reindex
 
 # fine you can run rails server
 
