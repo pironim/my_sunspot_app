@@ -149,8 +149,8 @@
     <!-- *** This field is used by Sunspot! *** -->
     <field name="lng" stored="true" type="tdouble" multiValued="false" indexed="true"/>
 
-    <dynamicField name="*_ac" type="autocomplete" indexed="true"  stored="true"/>
-    <dynamicField name="*_as" type="autosuggest" indexed="true"  stored="true"/>
+    <dynamicField name="*_ac" type="autocomplete" indexed="true"  stored="true" multiValued="true" />
+    <dynamicField name="*_as" type="autosuggest" indexed="true"  stored="true" multiValued="true" />
 
 
     <!-- *** This dynamicField is used by Sunspot! *** -->

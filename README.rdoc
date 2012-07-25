@@ -25,3 +25,17 @@ rails s
 # open page with autocompleate
 
 # visit localhost:3000/posts/search 
+
+# example for querying multiple fields
+# need rewrite js code to ruby code in models/controler
+# http://127.0.0.1:8982/solr/select?q=post_text_ac:rail+OR+user_name_ac:rail&indent=on&sort=score%20desc&wt=json&json.wrf=applyAjaxSolrCallback&_=1343214177717
+# 
+# need some research
+# 
+#  Sunspot.search(Post, User) do
+#    with(:user_id, 1)
+#    adjust_solr_params do |p|
+#      p[:q] = 'text_ac:rails'
+#      p[:fq] = ''
+#    end
+#  end.results

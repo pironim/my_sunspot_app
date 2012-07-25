@@ -1,4 +1,4 @@
 %h3
   Try typing the word 'rails' into text field to see autocomplete with Solr examples.
   %br
-  = autocomplete_text_field( "post", "text", "http://127.0.0.1:8982/solr/", "post_text").html_safe
+  = autocomplete_text_field( "post", "auto_fld", "http://127.0.0.1:8982/solr/", "post_text, user_name, user_email").html_safe

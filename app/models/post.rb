@@ -6,17 +6,8 @@ class Post < ActiveRecord::Base
   searchable do
     text :text
     integer :user_id, :references => User
-    autocomplete :post_text, :using => :text
-  end
-
-  class << self
-    def autocomplete(phrase, num_results = 10)
-      Post.search do
-        adjust_solr_params do |params|
-          params[:q] = "post_text_ac:\"#{phrase}\""
-        end
-        paginate :page => 1, :per_page => num_results
-      end
+    autocomplete :text_ac, :as => :text_ac, :multiple => true do
+      [self.text]
     end
   end
 

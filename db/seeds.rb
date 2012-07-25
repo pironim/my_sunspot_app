@@ -8,6 +8,8 @@
 
 User.new(:name => 'awesome_admin', :email => 'good@example.com' ).save
 User.new(:name => 'Regular user', :email => 'evil@example.com' ).save
+User.new(:name => 'rails', :email => 'some@nthing.com').save
+
 
 Post.new(:text => 'some stuff about rails', :user_id => User.first.id).save
 Post.new(:text => 'anything else', :user_id => User.first.id).save
