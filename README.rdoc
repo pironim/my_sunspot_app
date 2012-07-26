@@ -35,7 +35,7 @@ rails s
 #  Sunspot.search(Post, User) do
 #    with(:user_id, 1)
 #    adjust_solr_params do |p|
-#      p[:q] = 'text_ac:rails'
+#      p[:q] = 'text_ac:"some s"'
 #      p[:fq] = ''
 #    end
 #  end.results
