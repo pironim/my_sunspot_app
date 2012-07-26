@@ -39,3 +39,16 @@ rails s
 #      p[:fq] = ''
 #    end
 #  end.results
+#
+#  Sunspot.search(User, Post) do
+#    facet :text_ac
+#    with(:user_id, 1)
+#
+#    adjust_solr_params do |p|
+#      p['q'] = '*:*'
+#      p['fq'] = ''
+#      p['facet'] = true
+#      p['facet.field'] = 'text_ac'
+#      p['facet.prefix'] = 'stuff a'
+#    end
+#  end.facet_response["facet_fields"]["text_ac"]

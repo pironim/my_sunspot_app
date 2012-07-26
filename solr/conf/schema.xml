@@ -69,11 +69,9 @@
 
     <fieldType name="autocomplete" class="solr.TextField" positionIncrementGap="100">
       <analyzer type="index">
-        <!--tokenizer class="solr.KeywordTokenizerFactory"/-->
-        <!--tokenizer class="solr.NGramTokenizerFactory" minGramSize="2" maxGramSize="50"/-->
-        <tokenizer class="solr.WhitespaceTokenizerFactory" minGramSize="2" maxGramSize="50"/>
+        <tokenizer class="solr.NGramTokenizerFactory" minGramSize="2" maxGramSize="50"/>
         <filter class="solr.LowerCaseFilterFactory"/>
-   	   <filter class="solr.EdgeNGramFilterFactory" minGramSize="1" maxGramSize="25" />
+   	   <filter class="solr.EdgeNGramFilterFactory" minGramSize="2" maxGramSize="25" />
    	 </analyzer>
    	 <analyzer type="query">
    	   <tokenizer class="solr.WhitespaceTokenizerFactory"/>
